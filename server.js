@@ -6,7 +6,13 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://cleaning-service-frontend1664.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // Connect to MongoDB
