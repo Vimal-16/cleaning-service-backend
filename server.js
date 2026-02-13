@@ -11,7 +11,9 @@ app.use(cors({
     'http://localhost:5173',
     'https://cleaning-service-frontend1664.vercel.app'
   ],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
